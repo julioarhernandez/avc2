@@ -78,16 +78,12 @@
           <h3 class="widget-header">Company</h3>
           <div class="footer-list-wrap">
             <ul class="footer-list">
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="service.html">Our Services</a></li>
-              <li><a href="team.html">Our Team</a></li>
-              <li><a href="blog-details.html">Blog And News</a></li>
-            </ul>
-            <ul class="footer-list">
-              <li><a href="about.html">Features</a></li>
-              <li><a href="service.html">Skill</a></li>
-              <li><a href="team.html">Clients</a></li>
-              <li><a href="contact.html">Testimonial</a></li>
+              {% set navPages = collections.all | eleventyNavigation %} {%- for
+              entry in navPages %}
+              <li>
+                <a href="{{ entry.url }}">{{ entry.title }}</a>
+              </li>
+              {%- endfor %}
             </ul>
           </div>
         </div>
@@ -121,9 +117,9 @@
       <div class="copyright-content">
         <p>© PixFix 2024 | All Rights Reserved</p>
         <ul class="copy-list">
-          <li><a href="contact.html">Trams & Condition</a></li>
+          <li><a href="contact.html">Terms & Condition</a></li>
           <li><a href="contact.html">Privacy Policy</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
         </ul>
       </div>
     </div>
