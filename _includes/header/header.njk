@@ -1,0 +1,195 @@
+<!-- header-area-start -->
+<header class="header sticky-active">
+  <div class="primary-header">
+    <div class="container">
+      <div class="primary-header-inner">
+        <div class="header-logo d-lg-block">
+          <a href="index.html">
+            <img src="/assets/img/logo/logo.png" alt="Logo" />
+          </a>
+        </div>
+        <div class="header-menu-wrap">
+          <div class="mobile-menu-items">
+            <ul class="sub-menu">
+              {% set navPages = collections.all | eleventyNavigation %} {%- for
+              entry in navPages %}
+              <li class="{% if entry.url == page.url %}active{% endif %}">
+                <a href="{{ entry.url }}">{{ entry.title }}</a>
+              </li>
+              {%- endfor %}
+            </ul>
+          </div>
+        </div>
+        <!-- /.header-menu-wrap -->
+        <div class="header-right">
+          <div class="search-icon dl-search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="sidebar-icon">
+            <button class="sidebar-trigger open">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <div class="header-logo d-none d-lg-none">
+            <a href="index.html">
+              <img src="/assets/img/logo/logo.png" alt="Logo" />
+            </a>
+          </div>
+          <div class="header-right-item">
+            <a
+              href="javascript:void(0)"
+              class="mobile-side-menu-toggle d-lg-none"
+              ><i class="fa-sharp fa-solid fa-bars"></i
+            ></a>
+          </div>
+        </div>
+        <!-- /.header-right -->
+      </div>
+      <!-- /.primary-header-inner -->
+    </div>
+  </div>
+</header>
+<!-- /.Main Header -->
+
+<div id="popup-search-box">
+  <div class="box-inner-wrap d-flex align-items-center">
+    <form id="form" action="#" method="get" role="search">
+      <input
+        id="popup-search"
+        type="text"
+        name="s"
+        placeholder="Type keywords here..."
+      />
+    </form>
+    <div class="search-close">
+      <i class="fa-sharp fa-regular fa-xmark"></i>
+    </div>
+  </div>
+</div>
+<!-- /#popup-search-box -->
+
+<div class="mobile-side-menu">
+  <div class="side-menu-content">
+    <div class="side-menu-head">
+      <a href="index.html"
+        ><img src="/assets/img/logo/logo.png" alt="logo"
+      /></a>
+      <button class="mobile-side-menu-close">
+        <i class="fa-regular fa-xmark"></i>
+      </button>
+    </div>
+    <div class="side-menu-wrap"></div>
+    <ul class="side-menu-list">
+      <li>
+        <i class="fa-light fa-location-dot"></i>Address :
+        <span>Amsterdam, 109-74</span>
+      </li>
+      <li>
+        <i class="fa-light fa-phone"></i>Phone :
+        <a href="tel:+01569896654">+01 569 896 654</a>
+      </li>
+      <li>
+        <i class="fa-light fa-envelope"></i>Email :
+        <a href="mailto:info@example.com">info@example.com</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- /.mobile-side-menu -->
+<div class="mobile-side-menu-overlay"></div>
+
+<div id="sidebar-area" class="sidebar-area">
+  <button class="sidebar-trigger close">
+    <svg
+      class="sidebar-close"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      width="16px"
+      height="12.7px"
+      viewBox="0 0 16 12.7"
+      style="enable-background: new 0 0 16 12.7"
+      xml:space="preserve"
+    >
+      <g>
+        <rect
+          x="0"
+          y="5.4"
+          transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.1569 7.5208)"
+          width="16"
+          height="2"
+        ></rect>
+        <rect
+          x="0"
+          y="5.4"
+          transform="matrix(0.7071 0.7071 -0.7071 0.7071 6.8431 -3.7929)"
+          width="16"
+          height="2"
+        ></rect>
+      </g>
+    </svg>
+  </button>
+  <div class="side-menu-content">
+    <div class="side-menu-logo">
+      <img src="/assets/img/logo/logo.png" alt="logo" />
+    </div>
+    <div class="side-menu-about">
+      <div class="side-menu-header">
+        <h3>About Us</h3>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <a href="contact.html" class="rr-primary-btn">Contact Us</a>
+    </div>
+    <div class="side-menu-contact">
+      <div class="side-menu-header">
+        <h3>Contact Us</h3>
+      </div>
+      <ul class="side-menu-list">
+        <li>
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Valentin, Street Road 24, New York,</p>
+        </li>
+        <li>
+          <i class="fas fa-phone"></i>
+          <a href="tel:+000123456789">+000 123 (456) 789</a>
+        </li>
+        <li>
+          <i class="fas fa-envelope-open-text"></i>
+          <a href="mailto:moratcontact@gmail.com">moratcontact@gmail.com</a>
+        </li>
+      </ul>
+    </div>
+    <ul class="side-menu-social">
+      <li class="facebook">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+      </li>
+      <li class="instagram">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </li>
+      <li class="twitter">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </li>
+      <li class="g-plus">
+        <a href="#"><i class="fab fa-fab fa-google-plus"></i></a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--/.sidebar-area-->
+
+<div id="preloader">
+  <div class="preloader-close">x</div>
+  <div class="sk-three-bounce">
+    <div class="sk-child sk-bounce1"></div>
+    <div class="sk-child sk-bounce2"></div>
+    <div class="sk-child sk-bounce3"></div>
+  </div>
+</div>
+<!-- ./ preloader -->
