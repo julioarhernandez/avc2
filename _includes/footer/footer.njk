@@ -11,8 +11,8 @@
           </div>
           <div class="content">
             <span
-              >2416 Mapleview DriveTampa, <br />
-              FL 33634</span
+              >{{ data.address1 }} <br />
+              {{ data.address2 }}</span
             >
           </div>
         </div>
@@ -25,12 +25,8 @@
           <div class="content">
             <ul>
               <li>
-                Main Email :
-                <a href="mailto:contact@website">contact@website</a>
-              </li>
-              <li>
-                ComInquiries :
-                <a href="mailto:Info@mail.com">Info@mail.com</a>
+                Email :
+                <a href="mailto:{{ data.email }}">{{ data.email }}</a>
               </li>
             </ul>
           </div>
@@ -43,8 +39,9 @@
           </div>
           <div class="content">
             <ul>
-              <li>Telephone : <a href="tel:0029129102320">0029129102320</a></li>
-              <li>Mobile : <a href="tel:000232439493">000232439493</a></li>
+              <li>
+                Mobile : <a href="tel:{{ data.phone }}">{{ data.phone }}</a>
+              </li>
             </ul>
           </div>
         </div>

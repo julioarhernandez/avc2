@@ -135,11 +135,7 @@ eleventyNavigation:
               <div class="contact-info">
                 <span
                   >Mobile:
-                  <a href="tel:+562308059632">+5623 - 080 - 59632</a></span
-                >
-                <span
-                  >Hotline:
-                  <a href="tel:+1234853365"> +1234 - 853 - 365</a></span
+                  <a href="tel:{{ data.phone }}">{{ data.phone }}</a></span
                 >
               </div>
             </div>
@@ -152,12 +148,7 @@ eleventyNavigation:
               <h4 class="title">Email</h4>
               <div class="contact-info">
                 <span
-                  ><a href="mailto:info@exampleyourmail.com"
-                    >info@exampleyourmail.com</a
-                  ></span
-                >
-                <span
-                  ><a href="mailto:info@example.com">info@example.com</a></span
+                  ><a href="mailto:{{ data.email }}">{{ data.email }}</a></span
                 >
               </div>
             </div>
@@ -169,7 +160,7 @@ eleventyNavigation:
             <div class="content">
               <h4 class="title">Location</h4>
               <div class="contact-info">
-                <span>Dhaka 102, utl 1216, road 45 stert linehouse street</span>
+                <span>{{ data.address1 }} {{ data.address2 }}</span>
               </div>
             </div>
           </div>
